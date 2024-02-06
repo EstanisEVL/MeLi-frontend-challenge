@@ -1,3 +1,3 @@
-# MercadoLibre Frontend Challenge
+# Mercado Libre Frontend Challenge
 
-test práctico para aspirantes al área de front-end de Mercado Libre.
+Test práctico para aspirantes al área de front-end de Mercado Libre.
