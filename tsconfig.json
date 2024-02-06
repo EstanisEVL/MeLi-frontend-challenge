@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
+    "module": "ESNext",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -14,10 +15,5 @@
     "jsx": "react-jsx",
     "outDir": "./dist"
   },
-  "include": [
-    "client/src/**/*.ts",
-    "client/src/**/*.tsx",
-    "server/src/**/*.ts",
-    "server/src/**/*.tsx"
-  ]
+  "include": ["server/src/**/*.tsx"]
 }

@@ -1,16 +1,13 @@
 const path = require("path");
 
 module.exports = {
-  entry: {
-    server: "./server/src/server.tsx",
-  },
+  entry: "./client/src/index.tsx",
 
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    path: path.resolve(__dirname, "dist/client"),
+    filename: "bundle.js",
+    publicPath: "/",
   },
-
-  target: "node",
 
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
@@ -21,10 +18,8 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        loader: "ts-loader",
+        use: ["ts-loader"],
       },
     ],
   },
-
-  devtool: "inline-source-map",
 };
