@@ -30,11 +30,11 @@ app.get("/", async (req: Request, res: Response) => {
           <title>MeLi - Frontend Challenge</title>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-          <link rel="stylesheet" href="/styles.bundle.css">
+          <link rel="stylesheet" href="styles.bundle.css">
         </head>
         <body>
           <div id="root">${appHtml}</div>
-          <script src="/index.bundle.js"></script>
+          <script src="index.bundle.js"></script>
         </body>
       </html>
     `;
@@ -60,11 +60,11 @@ app.get("/items", async (req: Request, res: Response) => {
           <title>MeLi - Frontend Challenge</title>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-          <link rel="stylesheet" href="/styles.bundle.css">
+          <link rel="stylesheet" href="styles.bundle.css">
         </head>
         <body>
           <div id="root">${appHtml}</div>
-          <script src="/pages/search.bundle.js"></script>
+          <script src="pages/search.bundle.js"></script>
         </body>
       </html>
     `;

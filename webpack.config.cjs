@@ -40,7 +40,7 @@ module.exports = {
         use: ["ts-loader"],
       },
       {
-        test: /\.scss?$/i,
+        test: /\.(scss|css)?$/,
         include: path.resolve(__dirname, "client/src/styles"),
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
