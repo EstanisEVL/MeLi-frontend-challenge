@@ -50,12 +50,17 @@ const SearchResults = () => {
 
   return (
     <>
-      <header>
-        <nav>
-          <div>
-            <img src='' alt='Mercado Libre logo' />
-          </div>
-          <div>
+      <header className='header'>
+        <nav className='header__nav'>
+          <a href='/'>
+            <div className='nav__brand'>
+              <img
+                src='https://i.ibb.co/pvtZW0Z/Logo-ML.png'
+                alt='Mercado Libre logo'
+              />
+            </div>
+          </a>
+          <div className='nav__search'>
             <form onSubmit={handleSubmit}>
               <input
                 type='text'
@@ -63,12 +68,17 @@ const SearchResults = () => {
                 placeholder='Nunca dejes de buscar'
                 onChange={handleChange}
               />
-              <button type='submit'>Buscar</button>
+              <button type='submit'>
+                <img
+                  src='https://i.ibb.co/WyVgHZj/ic-Search.png'
+                  alt='search icon'
+                />
+              </button>
             </form>
           </div>
         </nav>
       </header>
-      <main>
+      <main className='main'>
         <section>
           <div>
             {data &&
