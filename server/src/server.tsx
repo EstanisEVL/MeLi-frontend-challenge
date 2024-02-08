@@ -108,7 +108,7 @@ app.get("/items/:id", async (req: Request, res: Response) => {
   }
 });
 
-/* Items */
+/* Api */
 app.get("/api/items", async (req: Request, res: Response) => {
   try {
     const author = { name: "Estanislao", lastname: "Varela" };

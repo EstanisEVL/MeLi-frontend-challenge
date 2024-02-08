@@ -1,5 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import SearchResults from "./SearchResults";
 
-ReactDOM.hydrate(<SearchResults />, document.getElementById("root"));
+ReactDOM.hydrateRoot(
+  document.getElementById("root") as HTMLElement,
+  <SearchResults />
+);
