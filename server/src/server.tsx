@@ -28,6 +28,7 @@ app.get("/", async (req: Request, res: Response) => {
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>MeLi - Frontend Challenge</title>
+          <link rel="stylesheet" href="/styles.bundle.css">
         </head>
         <body>
           <div id="root">${appHtml}</div>
@@ -55,6 +56,7 @@ app.get("/items", async (req: Request, res: Response) => {
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>MeLi - Frontend Challenge</title>
+          <link rel="stylesheet" href="/styles.bundle.css">
         </head>
         <body>
           <div id="root">${appHtml}</div>
@@ -82,6 +84,7 @@ app.get("/items/:id", async (req: Request, res: Response) => {
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>MeLi - Frontend Challenge</title>
+          <link rel="stylesheet" href="/styles.bundle.css">
         </head>
         <body>
           <div id="root">${appHtml}</div>
