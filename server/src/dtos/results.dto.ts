@@ -8,6 +8,6 @@ export class ResultsDto {
   }
 
   author: Author;
-  categories: string[];
-  items: Item[];
+  categories?: string[];
+  items?: Item[];
 }

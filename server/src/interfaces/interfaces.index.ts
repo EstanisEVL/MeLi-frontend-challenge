@@ -16,6 +16,7 @@ export interface Item {
   picture: string;
   condition: string;
   free_shipping: boolean;
+  seller_address?: string;
 }
 
 export interface ItemDetail {

@@ -1,26 +1,3 @@
-/*
-{
-  “author”:
-    { “name”: String
-      “lastname”: String
-    },
-  “item”:
-    {
-      "id": String,
-      "title": String,
-      "price": {
-        "currency": String,
-        "amount": Number,
-        "decimals": Number,
-      },
-  “picture”: String,
-  "condition": String,
-  "free_shipping": Boolean,
-  "sold_quantity", Number
-  "description": String
-  }
-}
-*/
 import { Author, ItemDetail } from "../interfaces/interfaces.index";
 
 export class ItemResultDto {

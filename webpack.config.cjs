@@ -1,18 +1,29 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./client/src/index.tsx",
+  mode: "development",
+
+  entry: {
+    index: { import: "./client/src/index.tsx", filename: "index.bundle.js" },
+    search: {
+      import: "./client/src/search.tsx",
+      filename: "pages/search.bundle.js",
+    },
+    item: {
+      import: "./client/src/item.tsx",
+      filename: "pages/item.bundle.js",
+    },
+  },
 
   output: {
     path: path.resolve(__dirname, "dist/client"),
-    filename: "bundle.js",
     publicPath: "/",
   },
 
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
     alias: {
-      "@components": path.resolve(__dirname, "client/src/components"),
+      ".js": [".js", ".ts", ".tsx"],
     },
   },
 
