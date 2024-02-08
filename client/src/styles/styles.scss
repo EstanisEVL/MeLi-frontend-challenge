@@ -70,7 +70,62 @@ body {
 }
 
 .main {
-  height: 92vh;
+  min-height: 92vh;
   flex-grow: 1;
   background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  .section {
+    width: 85%;
+    .section__breadcrumb-container {
+      margin: 16px 0;
+      p {
+        font-size: 14px;
+        color: #666666;
+      }
+    }
+
+    .section__search-article {
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      border-radius: 4px;
+      margin-bottom: 10%;
+      a {
+        text-decoration: none;
+        color: #333333;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        .search-article__result-card {
+          display: flex;
+          align-items: center;
+          width: 95%;
+          border-bottom: 2px solid #eeeeee;
+          .result-card__img-container {
+            margin: 16px;
+            img {
+              border-radius: 4px;
+              width: 180px;
+              height: 180px;
+            }
+          }
+          .result-card__info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            .info-container__paragraph {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              font-size: 24px;
+            }
+            h3 {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

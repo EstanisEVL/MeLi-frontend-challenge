@@ -79,31 +79,40 @@ const SearchResults = () => {
         </nav>
       </header>
       <main className='main'>
-        <section>
-          <div>
+        <section className='section'>
+          <div className='section__breadcrumb-container'>
             {data &&
               data?.categories?.map((category, index) => {
                 return <p key={index}>{category}</p>;
               })}
           </div>
-          <article>
+          <article className='section__search-article'>
             {data &&
               data?.items?.map((item: any) => {
                 return (
                   <a key={item.id} href={`/items/${item.id}`}>
-                    <div>
-                      <div>
+                    <div className='search-article__result-card'>
+                      <div className='result-card__img-container'>
                         <img src={item.picture} alt='' />
                       </div>
-                      <p>
-                        {new Intl.NumberFormat("es-AR", {
-                          style: "currency",
-                          currency: "ARS",
-                          minimumFractionDigits: 0,
-                        }).format(Math.floor(item.price))}{" "}
-                        {item.free_shipping ? <span>✔️</span> : null}
-                      </p>
-                      <h3>{item.title}</h3>
+                      <div className='result-card__info-container'>
+                        <div className='info-container__paragraph'>
+                          <p>
+                            {new Intl.NumberFormat("es-AR", {
+                              style: "currency",
+                              currency: "ARS",
+                              minimumFractionDigits: 0,
+                            }).format(Math.floor(item.price))}{" "}
+                          </p>
+                          {item.free_shipping ? (
+                            <img
+                              src='https://i.ibb.co/47dvWL9/ic-shipping.png'
+                              alt='truck icon'
+                            />
+                          ) : null}
+                        </div>
+                        <h3>{item.title}</h3>
+                      </div>
                     </div>
                   </a>
                 );

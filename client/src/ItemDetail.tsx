@@ -64,8 +64,8 @@ const ItemDetail = () => {
         </nav>
       </header>
       <main className='main'>
-        <section>
-          <div>
+        <section className='section'>
+          <div className='section__breadcrumb-container'>
             {/* {data &&
               data?.categories?.map((category, index) => {
                 return <p key={index}>{category}</p>;
