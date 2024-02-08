@@ -31,8 +31,6 @@ const ItemDetail = () => {
     fetchItemDetails(itemId);
   }, []);
 
-  // ARMAR BREADCRUMB CON CATEGORIAS DEL ITEM
-
   return (
     <>
       <header className='header'>
@@ -65,43 +63,52 @@ const ItemDetail = () => {
       </header>
       <main className='main'>
         <section className='section'>
-          <div className='section__breadcrumb-container'>
-            {/* {data &&
-              data?.categories?.map((category, index) => {
-                return <p key={index}>{category}</p>;
-              })} */}
-          </div>
-          <article>
+          <article className='section__item-article'>
             {item ? (
-              <div>
-                <div>
-                  <img src={item.picture} alt={item.item.title} />
-                </div>
-                <div>
-                  <p>
-                    <span>
-                      {String(item.condition).toLowerCase() === "new"
-                        ? "Nuevo"
-                        : "Usado"}
-                    </span>{" "}
-                    - {item.sold_quantity} vendidos
-                  </p>
-                  <h1>{item.item.title}</h1>
-                  <p>
-                    {new Intl.NumberFormat("es-AR", {
-                      style: "currency",
-                      currency: "ARS",
-                      minimumFractionDigits: 0,
-                    }).format(Math.floor(item.item.price.amount))}{" "}
-                    <span>{item.item.price.decimals}</span>
-                  </p>
-                  <div>
-                    <button>Comprar</button>
+              <div className='item-article__detail-container'>
+                <div className='detail-container__first-div'>
+                  <div className='first-div__img-container'>
+                    <img src={item.picture} alt={item.item.title} />
+                  </div>
+                  <div className='first-div__description-container'>
+                    <h3>Descripción del producto</h3>
+                    <p>{item.description}</p>
                   </div>
                 </div>
-                <div>
-                  <h3>Descripción del producto</h3>
-                  <p>{item.description}</p>
+
+                <div className='detail-container__second-div'>
+                  <div className='second-div__text-container'>
+                    <p>
+                      <span>
+                        {String(item.condition).toLowerCase() === "new"
+                          ? "Nuevo"
+                          : "Usado"}
+                      </span>{" "}
+                      - {item.sold_quantity} vendidos
+                    </p>
+                    <h1>{item.item.title}</h1>
+                  </div>
+                  <div className='second-div__price-container'>
+                    <div className='price-container__amount-paragraph'>
+                      <p>
+                        {new Intl.NumberFormat("es-AR", {
+                          style: "currency",
+                          currency: "ARS",
+                          minimumFractionDigits: 0,
+                        }).format(Math.floor(item.item.price.amount))}{" "}
+                      </p>
+                    </div>
+                    <div className='price-container__decimals-paragraph'>
+                      <p>
+                        {item.item.price.decimals !== 0
+                          ? item.item.price.decimals
+                          : "00"}
+                      </p>
+                    </div>
+                  </div>
+                  <div className='second-div__button-container'>
+                    <button>Comprar</button>
+                  </div>
                 </div>
               </div>
             ) : null}

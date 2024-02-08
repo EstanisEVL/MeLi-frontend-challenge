@@ -1,4 +1,4 @@
-import { Author, Price, Item, Results } from "../interfaces/interfaces.index";
+import { Author, Item } from "../interfaces/interfaces.index";
 
 export class ResultsDto {
   constructor(author: Author, categories: string[], items: Item[]) {
