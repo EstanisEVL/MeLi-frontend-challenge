@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const ItemDetail = () => {
   const [newQuery, setNewQuery] = useState<string | null>("");

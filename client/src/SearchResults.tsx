@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Results } from "../../server/src/interfaces/interfaces.index";
 
 const SearchResults = () => {

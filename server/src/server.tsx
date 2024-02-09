@@ -1,6 +1,7 @@
 import express, { Express, Request, Response } from "express";
 import ReactDOMServer from "react-dom/server";
 import path from "path";
+import { fileURLToPath } from "url";
 import App from "../../client/src/App.js";
 import SearchResults from "../../client/src/SearchResults.js";
 import ItemDetail from "../../client/src/ItemDetail.js";
@@ -11,7 +12,7 @@ import { Item } from "./interfaces/interfaces.index.js";
 const app: Express = express();
 const PORT: number = 3000;
 
-const __dirname: string = path.dirname(new URL(import.meta.url).pathname);
+const __dirname: string = fileURLToPath(new URL(".", import.meta.url));
 
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, "../../client")));
