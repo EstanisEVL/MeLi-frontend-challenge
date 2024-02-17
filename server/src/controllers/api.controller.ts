@@ -24,7 +24,6 @@ export const getItems = async (req: Request, res: Response) => {
   }
 };
 
-// Corregir cómo se reciben los datos del servicio: propiedad amount no la lee correctamente el frontend.
 export const getItemDetail = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
