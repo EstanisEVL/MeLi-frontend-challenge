@@ -15,5 +15,10 @@
     "jsx": "react-jsx",
     "outDir": "dist"
   },
-  "include": ["server/src/**/*.tsx"]
+  "include": [
+    "server/src/**/*.tsx",
+    "server/src/server.ts",
+    "server/src/routes/view.routes.ts",
+    "server/src/controllers/api.controller.ts"
+  ]
 }

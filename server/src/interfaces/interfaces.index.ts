@@ -16,7 +16,6 @@ export interface Item {
   picture: string;
   condition: string;
   free_shipping: boolean;
-  seller_address?: string;
 }
 
 export interface ItemDetail {
@@ -27,12 +26,11 @@ export interface ItemDetail {
 
 export interface ItemResult {
   author: Author;
-  itemDetail: ItemDetail;
+  item: ItemDetail;
   picture: string;
   condition: string;
   free_shipping: boolean;
   sold_quantity: number;
-  description: string;
 }
 
 export interface Results {
