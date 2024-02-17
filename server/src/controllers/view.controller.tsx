@@ -13,6 +13,7 @@ export const renderIndex = async (req: Request, res: Response) => {
       <html lang="en">
         <head>
           <meta charset="UTF-8">
+          <link rel="icon" href="https://i.ibb.co/pvtZW0Z/Logo-ML.png" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>MeLi - Frontend Challenge</title>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +44,7 @@ export const renderItems = async (req: Request, res: Response) => {
       <html lang="en">
         <head>
           <meta charset="UTF-8">
+          <link rel="icon" href="https://i.ibb.co/pvtZW0Z/Logo-ML.png" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>MeLi - Frontend Challenge</title>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,6 +75,7 @@ export const renderItemDetail = async (req: Request, res: Response) => {
       <html lang="en">
         <head>
           <meta charset="UTF-8">
+          <link rel="icon" href="https://i.ibb.co/pvtZW0Z/Logo-ML.png" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>MeLi - Frontend Challenge</title>
           <link rel="preconnect" href="https://fonts.googleapis.com">
